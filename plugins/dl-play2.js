@@ -1,4 +1,3 @@
-
 import yts from 'yt-search'
 import { youtubedl, youtubedlv2 } from '@bochilteam/scraper'
 let limit = 320
@@ -42,8 +41,8 @@ if (size.includes('GB')) return m.reply(` ≡  *FG YTDL*\n\n▢ *⚖️Peso* : $
 ▢ *⚖️Peso* : ${size}
 `.trim(), m, false, { mimetype: isVideo ? '' : 'audio/mpeg', asDocument: chat.useDocument })
 		m.react(done) 
-    } catch {
-		m.reply(`Error: intenta de nuevo`)
+    } catch (e) {
+		m.reply(`✳️ Error: ${e}`)
     }
 
 }
